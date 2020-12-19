@@ -387,13 +387,55 @@
     </footer>
 
     <!-- Модальное Окно -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
         <div class="modal">
-            <button type="button" class="close-btn" data-modal-close>
+            <button class="close-btn" type="button" data-modal-close>
                 <svg class="close-btn-icon" width="18px" height="18px">
                     <use href="./images/sprite.svg#close-button"></use>
                 </svg>
             </button>
+            <div class="modal-box">
+                <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+                <form class="modal-form" action="#">
+                    <label class="form-name">Имя
+                        <span class="modal-form-input-wrapper">
+                            <input class="form-input" type="text" name="user_name">
+                            <svg class="modal-icon" width="18px" height="18px">
+                                <use href="./images/sprite.svg#person-modal-black"></use>
+                            </svg>
+                        </span>
+                        
+                    </label>
+                    <label class="form-name">Телефон
+                        <span class="modal-form-input-wrapper">
+                            <input class="form-input" type="text" name="user_tel">
+                            <svg class="modal-icon" width="18px" height="18px">
+                                <use href="./images/sprite.svg#phone-modal-black"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="form-name">Почта
+                        <span class="modal-form-input-wrapper"> 
+                            <input class="form-input" type="text" name="user_email">
+                            <svg class="modal-icon" width="18px" height="18px">
+                                <use href="./images/sprite.svg#email-modal-black"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="form-name massage">Комментарий
+                        <textarea class="form-input message" name="user_message" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                    </label>
+                    <label class="modal-form-policy-text">
+                        <input class="checkbox" type="checkbox" name="user-policy">
+                        <span class="icon-check"></span>Соглашаюсь с рассылкой и принимаю &nbsp<a class="policy link" href="#">Условия договора</a>
+                        <!-- <svg class="icon-check" width="16px" height="15px">
+                            <use href="./images/sprite.svg#icon-check"></use>
+                        </svg>  -->
+                                               
+                    </label>
+                    <button class="button" type="submit">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Скрипты -->
