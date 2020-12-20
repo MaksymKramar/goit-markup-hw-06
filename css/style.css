@@ -648,6 +648,7 @@ img {
 }
 
 .subscribe-email {
+  padding-left: 16px;
   width: 358px;
   height: 50px;
 
@@ -658,13 +659,15 @@ img {
 }
 
 .subscribe-email::placeholder {
-  padding-left: 16px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-email:focus {
+  outline: none;
 }
 
 .icon-send {
@@ -690,6 +693,8 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: var(--timing-fn);
 }
 
 .backdrop.is-hidden .modal {
@@ -737,11 +742,13 @@ img {
   cursor: pointer;
 }
 
+.close-btn-icon {
+  transition: var(--timing-fn);
+}
+
 .close-btn:focus .close-btn-icon,
 .close-btn:hover .close-btn-icon {
   fill: var(--accent-text);
-
-  transition: fill var(--timing-fn);
 }
 
 /* Делаем форму контакта */
@@ -796,6 +803,8 @@ img {
   border-radius: 4px;
 
   cursor: pointer;
+
+  transition: border-color var(--timing-fn);
 }
 
 .form-input:focus {
@@ -806,7 +815,6 @@ img {
 
 .form-input:focus + .modal-icon {
   fill: var(--accent-text);
-  transition: fill var(--timing-fn);
 }
 
 .form-input.message {
@@ -821,7 +829,9 @@ img {
   position: absolute;
   top: 50%;
   left: 12px;
+
   transform: translateY(-50%);
+  transition: var(--timing-fn);
 }
 
 .modal-form-policy-text {
@@ -856,6 +866,7 @@ img {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
+  border: 2px solid var(--accent-text);
 }
 
 .icon-check {
@@ -1020,8 +1031,6 @@ img {
 .portfolio.link:hover .card-text,
 .portfolio.link:focus .card-text {
   transform: translateY(0);
-
-  transition: transform var(--timing-fn);
 }
 
 .portfolio-list-wrapper {
